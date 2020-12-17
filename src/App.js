@@ -2,64 +2,78 @@ import React, { Component } from 'react';
 import logo from './chris.png';
 // import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import Navbar from "./components/Navbar"
 import Home from './components/Home';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
 
+// style={{ display: "inline" }}
+
 function App() {
   return (
-    <Router>
-      <div className="App">
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>  
-          <li>
-            <Link to="/about">AboutMe</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link to="/contact">ContactMe</Link>
-          </li>
-        </ul>
-      </nav>   */}
-
-     <div>
-       <Link to="/">Home </Link>
-       <Link to="/about">AboutMe </Link>
-       <Link to="/projects">Projects </Link>
-       <Link to="/contact">ContactMe </Link>
-     </div>
-
-
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/about" component={AboutMe}/>
-          <Route path="/projects" component={Projects}/>
-          <Route path="/contact" component={ContactMe}/>
-        </Switch>
-
-      </div>
-    </Router>
+    <main>
+      <Router>
+        <Navbar/>
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/about" component={AboutMe}/>
+            <Route path="/projects" component={Projects}/>
+            <Route path="/contact" component={ContactMe}/>
+            <Route components={Error}/>
+          </Switch>
+      </Router>
+    </main>
   );
 }
 
+
 export default App;
 
-// function Navbar() {
-//   return (
-//     <div>
-//       <Link to="/">Home </Link>
-//       <Link to="/about">AboutMe </Link>
-//       <Link to="/projects">Projects </Link>
-//       <Link to="/contact">ContactMe </Link>
-//     </div>
-//   );
-// };
+
+{/* <Router>
+<div className="App">
+<nav>
+  <ul>
+    <li>
+      <Link className="navlinks" to="/">Home</Link>
+    </li>  
+    <li>
+      <Link className="navlinks" to="/about">AboutMe</Link>
+    </li>
+    <li>
+      <Link className="navlinks" to="/projects">Projects</Link>
+    </li>
+    <li>
+      <Link className="navlinks" to="/contact">ContactMe</Link>
+    </li>
+  </ul>
+</nav>  
+
+  <Switch>
+    <Route path="/" component={Home} exact />
+    <Route path="/about" component={AboutMe}/>
+    <Route path="/projects" component={Projects}/>
+    <Route path="/contact" component={ContactMe}/>
+  </Switch>
+
+</div>
+</Router>
+); */}
+
+
+
+
+
+
+
+     {/* <div>
+       <Link to="/">Home </Link>
+       <Link to="/about">AboutMe </Link>
+       <Link to="/projects">Projects </Link>
+       <Link to="/projects">Projects </Link>
+       <Link to="/contact">ContactMe </Link>
+     </div> */}
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
