@@ -1,0 +1,32 @@
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
+    background: rgb(0, 0, 0);
+    outline: none;
+    cursor: pointer;
+
+  }
+  
+  .navLinks{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    outline: none;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .link{
+    font-weight: bold;
+    font-family: "Chalkduster", Times, serif;
+    font-size: 30px;
+    color:  rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  .link:hover{
+    color:rgb(0, 162, 255);
+  }

@@ -1,1 +1,14 @@
 
+h1 {
+    font-weight: bold;
+    font-family: "Chalkduster", Times, serif;
+    color: black;
+    font-size: 100px;
+    text-align:center;
+}
+
+.Arrow{
+    margin-top: 50px;
+    margin-left: 330px;
+    align-items: center; 
+}
