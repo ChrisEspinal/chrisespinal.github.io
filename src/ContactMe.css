@@ -6,11 +6,11 @@
   margin-right: auto;
 }
 
-.FormContainer{
+/* .FormContainer{
   padding: 10px;
   padding-top: 20px;
   border:60px solid white;
-}
+} */
 
 .ContactLinks{
   background:black;
@@ -74,6 +74,7 @@ button {
   justify-content: center;
   background-color: black;
   border-radius: 25px;
+  margin-bottom: 100px;
 }
 
 /* .form > h1 {
