@@ -74,8 +74,12 @@ button {
   justify-content: center;
   background-color: black;
   border-radius: 25px;
+  margin-bottom: 100px;
 }
 
+/* .form > h1 {
+  margin-bottom: 30px;
+} */
 
 .form > input,
 textarea {
@@ -114,7 +118,8 @@ textarea {
   color: #fff;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  margin-top: 10px;
+  margin-top: -10px;
+  margin-bottom: 150px;
 }
 
 .form > button:hover {
