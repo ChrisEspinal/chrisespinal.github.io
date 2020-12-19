@@ -17,8 +17,20 @@ const ContactMe = () => {
   };
 
   return (
+    <div className="FormContainer">
+    <h1>Contact Me</h1>
     <form className="form" onSubmit={handleSubmit}>
-      <h1>Contact Me</h1>
+      <div className="ContactInfo">
+        <div className="ContactLinks">
+        <br/>
+          <div><a href= "https://github.com/ChrisEspinal" className = "Github">Visit My GitHub</a></div>
+          <br/>
+          <div><a href= "http://linkedin.com/in/chrisespinal" className = "LinkedIn">Connect On LinkedIn</a></div>
+          <br/><br/>
+          <div className= "FHeader">Or complete the form below:</div>
+          <br/><br/><br/>
+        </div>
+      </div>
 
       <label>Name</label>
       <input
@@ -47,113 +59,8 @@ const ContactMe = () => {
         Submit
       </button>
     </form>
+    </div>
   );
 };
 
 export default ContactMe;
-
-
-
-
-
-// import React from 'react';
-
-// class ContactMe extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {
-//           name: '',
-//           email: '',
-//           message: '',
-//         };
-  
-//       this.handleChange = this.handleChange.bind(this);
-//       this.handleSubmit = this.handleSubmit.bind(this);
-//     }
-  
-//     handleChange = (event) => {
-//         let nam = event.target.name;
-//         let val = event.target.value; 
-
-//         this.setState({[nam]: val});
-//         //this.setState({value: event.target.value});
-        
-//     }
-  
-//     handleSubmit(event) {
-//       alert('Hey ' + this.state.value + ', your message has been sent successfully!');
-//       event.preventDefault();
-//     }
-  
-//     render() {
-//       return (
-//         <form onSubmit={this.handleSubmit}>
-//           <label>
-//             Name:
-//             <input type="text" name={this.state.value} onChange={this.handleChange} />
-//           </label>
-//           <label>
-//             Email:
-//             <input type="text" email={this.state.value} onChange={this.handleChange} />
-//           </label>
-//           <label>
-//             Message:
-//             <input type="text" message={this.state.value} onChange={this.handleChange} />
-//           </label>
-//           <br/>
-//           <br/>
-//           <input type="submit" value="Submit" />
-//         </form>
-//       );
-//     }
-//   }
-
-//   export default ContactMe;
-
-
-
-
-
-// import React from 'react';
-
-// class ContactMe extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {
-//         username: '',
-//         age: null,
-//       };
-//     }
-//     myChangeHandler = (event) => {
-//       let nam = event.target.name;
-//       let val = event.target.value;
-//       this.setState({[nam]: val});
-//     }
-//     render() {
-//         // let header = '';
-//         // if (this.state.username) {
-//         //   header = <h1>Hello {this.state.username}</h1>;
-//         // } else {
-//         //   header = '';
-//         // }
-//       return (
-//         <form>
-//         <h1>Hello {this.state.username} {this.state.age}</h1>
-//         <p>Enter your name:</p>
-//         <input
-//           type='text'
-//           name='username'
-//           onChange={this.myChangeHandler}
-//         />
-//         <p>Enter your age:</p>
-//         <input
-//           type='text'
-//           name='age'
-//           onChange={this.myChangeHandler}
-//         />
-//         </form>
-//       );
-//     }
-//   }
-
-// export default ContactMe;

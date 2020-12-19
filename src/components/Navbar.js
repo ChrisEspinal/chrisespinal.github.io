@@ -16,22 +16,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-{/* <div className="navBar">
-<nav>
-  <ul>
-    <li>
-      <Link className="links" to="/">Home</Link>
-    </li>  
-    <li>
-      <Link className="links" to="/about">AboutMe</Link>
-    </li>
-    <li>
-      <Link className="links" to="/projects">Projects</Link>
-    </li>
-    <li>
-      <Link className="links" to="/contact">ContactMe</Link>
-    </li>
-  </ul>
-</nav>
-</div>  */}

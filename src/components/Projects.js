@@ -2,8 +2,6 @@ import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 import "../Projects.css";
 
-
-
 const ProjectAPI = {
     projects: [
       { project: 1, name: 'Connect4', imageUrl: "https://media.giphy.com/media/pSGbcMvcnav5jIEDMg/giphy.gif", description: 'This is a GUI based game of Connect 4 written in Java using OOP. The game can be played by two players who will take turns dropping their markers into columns. The names of each player will be requested by the GUI before the first game. Each game will continue until someone wins or the board becomes full. The user has the option of starting a new game at the end of every match. A Score Board is included in the GUI and all results are written/updated on an output file named Connect4-Results.txt. The player with the most wins will be displayed as “Champion”.', url:'https://github.com/ChrisEspinal/Connect4' },
@@ -25,16 +23,13 @@ const AllProjects = () =>
   <h1>View A Project</h1>
   </div>
   <div className = "Project-Nav">
-    {/* <ul> */}
       {ProjectAPI.all().map(p =>
         <div key={p.project} className = {p.project}>
           <div className="pjLinks">
-           {/* <img src = "https://media.giphy.com/media/TvADQSY3sSVK78CvcB/giphy.gif" />  */}
           <Link className="plink" to={`/projects/${p.project}`}>{p.name}</Link>
           </div>
         </div>,
       )}
-    {/* </ul> */}
   </div>
     <div className="images">
       <div className="img1"><img src = "https://media.giphy.com/media/TvADQSY3sSVK78CvcB/giphy.gif" /></div>
@@ -45,7 +40,6 @@ const AllProjects = () =>
 
 const Project = props => {
     const pj = ProjectAPI.get(parseInt(props.match.params.project));
-    // const pj = ProjectAPI.get(parseInt(props.match.params.project, 10));
     if (!pj) {
       return <div>Project not found :(</div>;
     }
@@ -53,18 +47,13 @@ const Project = props => {
       <div className="ProjectPage">
         <div className="PSubPHeader">{pj.name}</div>
         <div className="PContainer">
-        <br/>
-        <br/>
+        <br/><br/>
         <img src={pj.imageUrl} alt=""/>
         <div className="Description">{pj.description}</div>
         <div className="RepoLinkContainer">
         <a href={pj.url} className = "RepoLink">Go To Repo</a>
         </div>
-        <br/>
-        <br/>
-        {/* <img src={pj.imageUrl} alt=""/> */}
-        <br/>
-        <br/>
+        <br/><br/><br/><br/>
         <div className="BackLinkContainer">
         <Link className="BackLink" to="/projects">Back</Link>
         </div>
@@ -80,64 +69,3 @@ const Projects = () =>
   </Switch>;
 
 export default Projects;
-
-// import React from "react";
-// import { Link, Route, useParams, useRouteMatch } from "react-router-dom";
-
-
-// const Project = () => {
-//   const { name } = useParams();
-
-//   return (
-//     <div>
-//       <h3>{name}</h3>
-//     </div>
-//   );
-// }
-
-// const Projects = () => {
-//   const { url, path } = useRouteMatch();
-
-//   return (
-//     <div>
-//       <ul>
-//         <li>
-//           <Link to={`${url}/projectOne`}>projectOne</Link>
-//         </li>
-//         <li>
-//           <Link to={`${url}/boots`}>Boots</Link>
-//         </li>
-//         <li>
-//           <Link to={`${url}/footwear`}>Footwear</Link>
-//         </li>
-//       </ul>
-//       <Route path={`${path}/:name`}>
-//         <Project />
-//       </Route>
-//     </div>
-//   );
-// };
-
-// export default Projects;
-
-
-
-
-
-
-
-// class Projects extends React.Component{
-
-//     render(){
-//         return(
-//             <div className = "Projects">
-//                 <h1>This is my 'Projects' component test</h1>
-//                 {/* <a href="https://github.com/ChrisEspinal"><img src="chris.png" className="githubIcon" /></a> */}
-                
-//             </div>
-//         );
-//     }
-
-// }
-
-// export default Projects;

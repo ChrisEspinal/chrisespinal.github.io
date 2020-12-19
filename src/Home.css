@@ -1,8 +1,8 @@
-
 .Home{
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: 400px;
+    background-color: white;
 }
 
 .Text {
