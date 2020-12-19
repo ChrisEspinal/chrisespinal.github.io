@@ -4,12 +4,12 @@ import "../Navbar.css";
 
 function Navbar() {
     return (
-        <div class="navBar">
-            <div class="navLinks">
-                <Link class="link" to="/">Home</Link>
-                <Link class="link" to="/about">About Me</Link>
-                <Link class="link" to="/projects">Projects</Link>
-                <Link class="link" to="/contact">Contact </Link>
+        <div className="navBar">
+            <div className="navLinks">
+                <Link className="link" to="/">Home</Link>
+                <Link className="link" to="/about">About Me</Link>
+                <Link className="link" to="/projects">Projects</Link>
+                <Link className="link" to="/contact">Contact </Link>
             </div>
         </div>
     );

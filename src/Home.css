@@ -1,5 +1,13 @@
 
-h1 {
+.Home{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 400px;
+}
+
+.Text {
+    margin-left: auto;
+    margin-right: auto;
     font-weight: bold;
     font-family: "Chalkduster", Times, serif;
     color: black;
@@ -7,8 +15,7 @@ h1 {
     text-align:center;
 }
 
-.Arrow{
-    margin-top: 50px;
-    margin-left: 330px;
-    align-items: center; 
+.World{
+    margin-left: auto;
+    margin-right: auto;
 }
